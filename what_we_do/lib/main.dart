@@ -269,7 +269,7 @@ class RootScreen extends StatelessWidget {
             spreadRadius: 0,
           ),
         ],
-      ),
+      ), 
     );
   }
 
