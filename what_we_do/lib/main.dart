@@ -48,7 +48,9 @@ class RootScreen extends StatelessWidget {
           buildBackgroundImage(), // 배경 이미지 생성
           Align(
             alignment: Alignment.bottomCenter,
-            child: buildContent(context), // 콘텐츠들을 하단에 배치
+            child: SingleChildScrollView(
+              child: buildContent(context), // 콘텐츠들을 하단에 배치
+            ),
           ),
         ],
       ),
@@ -70,7 +72,7 @@ class RootScreen extends StatelessWidget {
 
   Widget buildContent(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 40), // 하단 여백 추가
+      padding: const EdgeInsets.all(16.0), // 여백 추가
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -90,7 +92,7 @@ class RootScreen extends StatelessWidget {
 
   Widget buildTermsText() {
     return Container(
-      width: 341,
+      width: double.infinity,
       height: 42,
       child: Center(
         child: Text(
@@ -116,7 +118,7 @@ class RootScreen extends StatelessWidget {
           await login(context);
         },
         child: Container(
-          width: 348,
+          width: double.infinity,
           height: 49,
           padding: const EdgeInsets.symmetric(horizontal: 14),
           decoration: BoxDecoration(
@@ -170,7 +172,7 @@ class RootScreen extends StatelessWidget {
           );
         },
         child: Container(
-          width: 348,
+          width: double.infinity,
           height: 52.56,
           decoration: BoxDecoration(
             color: Colors.black, // 애플 검정색
@@ -212,7 +214,7 @@ class RootScreen extends StatelessWidget {
 
   Widget buildTitleText() {
     return Container(
-      width: 341,
+      width: double.infinity,
       height: 78,
       child: Center(
         child: Text(
@@ -266,7 +268,6 @@ class RootScreen extends StatelessWidget {
       String serviceRefreshToken = responseData['refreshToken'];
       return {'serviceAccessToken': serviceAccessToken, 'serviceRefreshToken': serviceRefreshToken};
     } else {
-      print('fail');
       throw Exception('Failed to send token to API');
     }
   }
@@ -297,9 +298,9 @@ class RootScreen extends StatelessWidget {
           navigateHome(context, serviceTokens['serviceAccessToken']!, serviceTokens['serviceRefreshToken']!);
         } catch (error) {
           // Handle error
+        }
       }
-    }
-  } catch (e) {
+    } catch (e) {
     // Handle error
   }
 }
