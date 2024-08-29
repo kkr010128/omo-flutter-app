@@ -1,16 +1,3 @@
-# omo
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# omo 발표 자료
+![image](https://github.com/user-attachments/assets/696b9c45-3b95-48e3-bd2f-a1cc60640650)
+<img width="1806" alt="image" src="https://github.com/user-attachments/assets/4712583f-c5c4-467d-9296-7c8eae260946">
