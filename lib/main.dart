@@ -10,8 +10,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   // runApp() 호출 전 Flutter SDK 초기화
   KakaoSdk.init(
-    nativeAppKey: 'd8a06ec1af8730814033bf36e2cb5cba',
-    javaScriptAppKey: "a709c6184e105821403aca9715766056",
+    nativeAppKey: '${nativeappkey}',
+    javaScriptAppKey: "${javascriptappkey}",
   );
   runApp(const MyApp());
 }
